@@ -28,6 +28,7 @@ class ViewController: UIViewController {
         }
     }
     var currentGame: Game!
+    var score = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,7 +39,7 @@ class ViewController: UIViewController {
     func newRound(){
         if !listOfWords.isEmpty {
             let newWord = listOfWords.removeFirst()
-            currentGame = Game(word: newWord, incorrectMovesRemaining: incorrectMovesAllowed, guessedLetters: [])
+            currentGame = Game(word: newWord, incorrectMovesRemaining: incorrectMovesAllowed, guessedLetters: [], score: score)
             updateUI()
             enableLetterButtons(true)
         } else {
@@ -48,7 +49,7 @@ class ViewController: UIViewController {
     }
     
     func updateUI() {
-        scoreLabel.text = "Wins: \(totalWins), Losses: \(totalLosses)"
+        scoreLabel.text = "Wins: \(totalWins), Losses: \(totalLosses), Score: \(currentGame.score)"
         treeImageView.image = UIImage(named: "Tree \(currentGame.incorrectMovesRemaining)")
         var letters = [String]()
         for letter in currentGame.formattedWord {
@@ -61,6 +62,9 @@ class ViewController: UIViewController {
         if currentGame.incorrectMovesRemaining == 0 {
             totalLosses += 1
         } else if currentGame.word == currentGame.formattedWord {
+            let bouns = currentGame.incorrectMovesRemaining * 10 + 100
+            currentGame.score += bouns
+            score = currentGame.score
             totalWins += 1
         } else {
             updateUI()

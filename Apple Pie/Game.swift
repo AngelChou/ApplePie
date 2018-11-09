@@ -23,17 +23,21 @@ struct Game {
         }
         return guessedWord
     }
+    var score: Int
     
-    init(word: String, incorrectMovesRemaining: Int, guessedLetters: [Character]) {
+    init(word: String, incorrectMovesRemaining: Int, guessedLetters: [Character], score: Int) {
         self.word = word
         self.incorrectMovesRemaining = incorrectMovesRemaining
         self.guessedLetters = guessedLetters
+        self.score = score
     }
     
     mutating func playerGuessed(letter: Character) {
         guessedLetters.append(letter)
         if !word.contains(letter) {
             incorrectMovesRemaining -= 1
+        } else {
+            score += 5
         }
         
     }
