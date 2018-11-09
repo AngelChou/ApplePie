@@ -12,6 +12,7 @@
 		0B2702A3219528E500271881 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B2702A1219528E500271881 /* Main.storyboard */; };
 		0B2702A5219528E800271881 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B2702A4219528E800271881 /* Assets.xcassets */; };
 		0B2702A8219528E800271881 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B2702A6219528E800271881 /* LaunchScreen.storyboard */; };
+		0B2702B0219537FD00271881 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2702AF219537FD00271881 /* Game.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		0B2702A4219528E800271881 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0B2702A7219528E800271881 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0B2702A9219528E800271881 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0B2702AF219537FD00271881 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 				0B27029F219528E500271881 /* ViewController.swift */,
 				0B2702A1219528E500271881 /* Main.storyboard */,
 				0B2702A4219528E800271881 /* Assets.xcassets */,
+				0B2702AF219537FD00271881 /* Game.swift */,
 				0B2702A6219528E800271881 /* LaunchScreen.storyboard */,
 				0B2702A9219528E800271881 /* Info.plist */,
 			);
@@ -136,6 +139,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0B2702A0219528E500271881 /* ViewController.swift in Sources */,
+				0B2702B0219537FD00271881 /* Game.swift in Sources */,
 				0B27029E219528E500271881 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -292,7 +296,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "ShunChingChou.Apple-Pie";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Debug;
 		};
@@ -310,7 +314,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "ShunChingChou.Apple-Pie";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Release;
 		};
